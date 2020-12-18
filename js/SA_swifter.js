@@ -59,9 +59,9 @@ class SA_SwiftMenu {
 		}
 		});
 		 
-		 $("body").click(function(e) { 
+		 $(document).click(function(e) { 
 		 	if($(e.target).is('.swift')){ 
-		 		e.preventDefault(); return; 
+		 		//e.preventDefault();
 		 	}else{
 		  		fields.each(function() {			    
 				    $(this).css({
