@@ -9,13 +9,13 @@ class SA_SwiftMenu {
 	  switf() {	  		  	
 	    var $vm = this;
 	    
+
+		  this.wrapper.on('click', function(){
 		  	var radius = $vm.radius;
 			var fields = $vm.tabs,
 			container = $vm.menu, 
 			width = container.width(),
 			height = container.height();
-
-		  this.wrapper.on('click', function(){
 
 		if ($vm.stateDataShow === false) {
 
