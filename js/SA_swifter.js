@@ -60,6 +60,7 @@ class SA_SwiftMenu {
 		});
 
 		 $("body").click(function(e) { 
+			 var fields = $vm.tabs;
 		 	if($(e.target).is('.swift')){ 
 		 		e.preventDefault(); return; 
 		 	}else{
