@@ -59,7 +59,7 @@ class SA_SwiftMenu {
 		}
 		});
 		 
-		 $("div").click(function(e) { 
+		 $("body").click(function(e) { 
 		 	if($(e.target).is('.swift')){ 
 		 		e.preventDefault(); return; 
 		 	}else{
