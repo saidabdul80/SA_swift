@@ -59,7 +59,24 @@ class SA_SwiftMenu {
 		}
 		});
 
-	
+		 $("body").click(function(e) { 
+		 	if($(e.target).is('.swift')){ 
+		 		e.preventDefault(); return; 
+		 	}else{
+		  		fields.each(function() {			    
+				    $(this).css({
+				        left: '0px',
+				        top: '0px'
+				    });
+				})
+				setTimeout(function() {
+					$vm.stateDataShow = false;
+					fields.css('display','none');
+
+				}, 100);
+		 		
+		 	}
+		 });
 	  }
 
 	}
