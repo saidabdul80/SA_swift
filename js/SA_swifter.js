@@ -8,13 +8,14 @@ class SA_SwiftMenu {
 	  }
 	  switf() {	  		  	
 	    var $vm = this;
-		  this.wrapper.on('click', function(){
+	    
 		  	var radius = $vm.radius;
 			var fields = $vm.tabs,
 			container = $vm.menu, 
 			width = container.width(),
 			height = container.height();
 
+		  this.wrapper.on('click', function(){
 
 		if ($vm.stateDataShow === false) {
 
@@ -48,7 +49,6 @@ class SA_SwiftMenu {
 			        left: '0px',
 			        top: '0px'
 			    });
-			    angle += step;
 			})
 			setTimeout(function() {
 				$vm.stateDataShow = false;
@@ -58,21 +58,24 @@ class SA_SwiftMenu {
 
 		}
 		});
-
-		  $(window).on("click",function() {
-			fields.each(function() {			    
+		  
+	  	$('.swift').parents().click(function(e){
+	  		fields.each(function() {			    
 			    $(this).css({
 			        left: '0px',
 			        top: '0px'
 			    });
-			    angle += step;
 			})
 			setTimeout(function() {
 				$vm.stateDataShow = false;
 				fields.css('display','none');
 
 			}, 100);
-		  });
-	  })
+	  	}).children().click(function(event){
+	  		event.stopPropagation();
+	  	});
+		
+	  }
+	 	
 
 	}
