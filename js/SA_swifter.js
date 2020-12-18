@@ -60,7 +60,18 @@ class SA_SwiftMenu {
 		});
 
 		  $(window).click(function() {
-			//Hide the menus if visible
+			fields.each(function() {			    
+			    $(this).css({
+			        left: '0px',
+			        top: '0px'
+			    });
+			    angle += step;
+			})
+			setTimeout(function() {
+				$vm.stateDataShow = false;
+				fields.css('display','none');
+
+			}, 100);
 		  });
 	  }
 
