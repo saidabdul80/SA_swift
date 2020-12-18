@@ -59,7 +59,7 @@ class SA_SwiftMenu {
 		}
 		});
 
-		  $(window).click(function() {
+		  $(window).on("click",function() {
 			fields.each(function() {			    
 			    $(this).css({
 			        left: '0px',
@@ -73,6 +73,6 @@ class SA_SwiftMenu {
 
 			}, 100);
 		  });
-	  }
+	  })
 
 	}
