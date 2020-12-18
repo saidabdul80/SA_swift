@@ -8,13 +8,14 @@ class SA_SwiftMenu {
 	  }
 	  switf() {	  		  	
 	    var $vm = this;
-		  this.wrapper.on('click', function(){
+	    
 		  	var radius = $vm.radius;
 			var fields = $vm.tabs,
 			container = $vm.menu, 
 			width = container.width(),
 			height = container.height();
 
+		  this.wrapper.on('click', function(){
 
 		if ($vm.stateDataShow === false) {
 
@@ -48,7 +49,6 @@ class SA_SwiftMenu {
 			        left: '0px',
 			        top: '0px'
 			    });
-			    angle += step;
 			})
 			setTimeout(function() {
 				$vm.stateDataShow = false;
@@ -58,13 +58,16 @@ class SA_SwiftMenu {
 
 		}
 		});
-
-		 $("body").click(function(e) { 
-			 var fields = $vm.tabs;
-		 	if($(e.target).is('.swift')){ 
-		 		e.preventDefault(); return; 
-		 	}else{
-		  		fields.each(function() {			    
+		 
+	
+	  	/*
+	  	*/
+		
+	  }
+	 	clickOutside(){
+	 		var $vm = this;
+	 		$('.swift').parents().click(function(e){
+		  		$vm.tabs.each(function() {			    
 				    $(this).css({
 				        left: '0px',
 				        top: '0px'
@@ -72,12 +75,19 @@ class SA_SwiftMenu {
 				})
 				setTimeout(function() {
 					$vm.stateDataShow = false;
-					fields.css('display','none');
+					$vm.tabs.css('display','none');
 
 				}, 100);
+		  	}).children().click(function(event){
+		  		event.stopPropagation();
+		  	});
+	 		/*$("body").click(function(e) { 
+		 	if($(e.target).is('.swift')){ 
+		 		 
+		 	}else{
 		 		
 		 	}
-		 });
-	  }
+		 });*/
+	 	}
 
 	}
