@@ -1,26 +1,57 @@
 .swift{
-	width: 80px;height: 40px; padding:50px; border-radius:50%;
+	width: 80px;height: 40px; 
+	padding:50px;
+	border-radius:50%;
+	position: fixed;
+	
 }
-	.t-active{
+.swift-bottom-left{
+	bottom: 20px;
+	left: 10px;
+}
+.swift-bottom-right{
+	bottom: 20px;
+	right: 10px;
+}
+.swift-left-center{
+	top: 48%;
+	left: 10px;
+}
+.swift-right-center{
+	top: 48%;
+	right: 10px;
+}
+/*	.t-active{
 			
 			border-bottom: none !important;
 			color: rgb(30,60,200);
-		}
+		}*/
 		.tabsI{
 			position: absolute;
-			border:1px solid rgba(10,30,150,.4);			
-			padding: 20px 10px;
-			border-radius: 50%; 			
+			/*border:1px solid rgba(10,30,150,.4);			*/
+					
 			margin: 0px;
-			cursor: pointer;
-			width: 40px;
+			cursor: pointer;			
 			margin: 3px auto;
 			display: none;
-			top: 0;
-			left: 0;
+			
+			top: 0px;
+			left: 0px;
 			transition: left 0.4s, top 0.4s;
 		}
-		.tabsI:hover{
+		.tabsI span{
+			box-shadow:0px 1px 12px rgba(10,30,150,.4);
+			background: #fff;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%; 	
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: center;
+			align-items: center;
+		}
+		.tabsI span:hover{
 			background: rgba(10,30,255,.1);
 
 		}
@@ -30,7 +61,7 @@
 			top: -30px;		
 			z-index: 99;
 		}
-		.t-menu{
+		.t-menu > span{
 			padding: 25px 15px;
 			cursor: pointer;
 			display: inline;
@@ -39,9 +70,10 @@
 			position: relative;
 			z-index: 100;
 			user-select: none;
-			border:1px solid rgba(10,30,150,.4);
+			/*border:1px solid rgba(10,30,150,.4);*/
+			box-shadow:0px 1px 12px rgba(10,30,150,.4);
 		}
-		.t-menu:hover{
+		.t-menu span:hover{
 			color:#fff;
 			background:rgba(10,30,100);	
 		}}
