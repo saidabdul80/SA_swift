@@ -47,9 +47,8 @@
 </pre>
 </div>			
 <pre   style="background: #efdefe; color:#999;padding: 10px 0px 0px 10px; overflow-x: scroll;">				
-	var switf = new SA_SwiftMenu('round-tab',100, '-20');
+	var switf = new SA_SwiftMenu({wrapper:'round-tab',radius:100,rotate: -20});
 	switf.switf();
-	switf.clickOutside();
 </pre>
 		</div>
 		<div style="position: fixed;top: 0;right: 0;">
@@ -67,31 +66,41 @@
 		<div class="tabsI" ><span>Item 3</span></div>		
 	</div>
 </div>
-<!-- <div  class="swift swift-bottom-left">
+<div  class="swift swift-bottom-left">
 	<div id="round-tab2" class="t-menu">
 		<span>menu</span>	
 		<div class="tabsI "><span>Item 1</span></div>	
-		<div class="tabsI " ><span>Item 2</span></div>			
-		<div class="tabsI " ><span>Item 3</span></div>		
-		<div class="tabsI " ><span>Item 3</span></div>		
-		<div class="tabsI " ><span>Item 3</span></div>		
-		<div class="tabsI " ><span>Item 3</span></div>		
+		<div class="tabsI " ><span>Item 2</span></div>	
+		<div id="round-tab3" class="tabsI tabsI-sub">		
+			<span>menu</span>	
+			<div class="d-hide" ><span>Items</span></div>		
+			<div class="d-hide" ><span>Item 3</span></div>		
+			<div class="d-hide" ><span>Item 3</span></div>								
+		</div>
+			
 	</div>
-</div> -->
+</div>
 <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="js/SA_swifter.js"></script>
 <!-- <script type="text/javascript" src="wow/wow.js"></script> -->
 <script>
 	
 	
-	var switf = new SA_SwiftMenu('round-tab',100, '-20');
+	var switf = new SA_SwiftMenu({wrapper:'round-tab',radius:100,rotate: -20});
 	switf.switf();
 	switf.clickOutside();
 
 
-	var switf2 = new SA_SwiftMenu('round-tab2',100, '-20');
+	var switf2 = new SA_SwiftMenu(
+		{wrapper:'round-tab2',radius:100,rotate: 4.5,background:'rgba(20,0,200,.4)'},
+		{wrapper:'round-tab3',radius:100,rotate: 4.5,background:'rgba(20,0,200,.4)'}
+		);
 	switf2.switf();
-	switf2.clickOutside();
+
+
+/*	var switf3 = new SA_SwiftMenu('round-tab3',100, -20);
+	switf3.switf();
+	*/
 	/*var switf1 = new SA_SwiftMenu($('.t-menu1'),100,$('#round-tab1'),$('.itemD'),'-20');
 	switf1.switf();
 	switf1.clickOutside();*/
