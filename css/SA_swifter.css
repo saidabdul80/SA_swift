@@ -6,7 +6,7 @@
 	
 }
 .swift-bottom-left{
-	bottom: 20px;
+	bottom: 60px;
 	left: 10px;
 }
 .swift-bottom-right{
@@ -34,7 +34,7 @@
 			cursor: pointer;			
 			margin: 3px auto;
 			display: none;
-			
+			z-index: 99;
 			top: 0px;
 			left: 0px;
 			transition: left 0.4s, top 0.4s;
@@ -76,4 +76,20 @@
 		.t-menu span:hover{
 			color:#fff;
 			background:rgba(10,30,100);	
-		}}
+		}
+		.d-hide{
+			position: absolute;
+			/*border:1px solid rgba(10,30,150,.4);			*/					
+			margin: 0px;
+			cursor: pointer;			
+			margin: 3px auto;
+			display: none !important;			
+			top: 0px;
+			left: 0px;
+			transition: left 0.4s, top 0.4s;
+			z-index: 103;
+		}
+		.d-show{
+			display: block !important;
+		}
+		
